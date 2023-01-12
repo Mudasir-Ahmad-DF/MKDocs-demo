@@ -21,48 +21,100 @@ from df_connector import analytics
 analytics_obj = analytics.connect("Test-analytics-Connector")  # Identifier name which we created in the portal
 ```
 
-## Athena
+## AWS
+
+### Athena
 
 ```python
 from df_connector.aws import athena
 
 athena_obj = athena.connect("Test-athena-Connector")  # Identifier name which we created in the portal
 ```
-## AWS Logs
 
-```python
-from df_connector.aws import logs
-
-aws_logs_obj = logs.connect("Test-logs-Connector")  # Identifier name which we created in the portal
-```
-## Azure DataLake
-
-```python
-from df_connector.azure import datalake
-
-azure_datalake_obj = datalake.connect("Test-datalake-Connector")  # Identifier name which we created in the portal
-```
-## Azure SQL
-
-```python
-from df_connector.azure import sql
-
-azure_sql_obj = sql.connect("Test-sql-Connector")  # Identifier name which we created in the portal
-```
-## BigQuery
-
-```python
-from df_connector.gcp import bigquery
-
-bigquery_obj = bigquery.connect("Test-bigquery-Connector")  # Identifier name which we created in the portal
-```
-## Cloudwatch
+### Cloudwatch
 
 ```python
 from df_connector.aws import cloudwatch
 
 aws_cloudwatch_obj = cloudwatch.connect("Test-cloudwatch-Connector")  # Identifier name which we created in the portal
 ```
+### DynamoDB
+
+```python
+from df_connector.dynamodb import dynamodb
+
+aws_dynamodb_obj = dynamodb.connect("Test-dynamodb-Connector")  # Identifier name which we created in the portal
+```
+
+### Logs
+
+```python
+from df_connector.aws import logs
+
+aws_logs_obj = logs.connect("Test-logs-Connector")  # Identifier name which we created in the portal
+```
+### Redshift
+
+```python
+from df_connector.aws import redshift
+
+aws_redshift_obj = redshift.connect("Test-Redshift-Connector")  # Identifier name which we created in the portal
+```
+### S3
+
+```python
+from df_connector.aws import s3
+
+aws_s3_obj = s3.connect("Test-S3-Connector")  # Identifier name which we created in the portal
+```
+
+
+## Azure 
+
+### DataLake
+
+```python
+from df_connector.azure import datalake
+
+azure_datalake_obj = datalake.connect("Test-datalake-Connector")  # Identifier name which we created in the portal
+```
+
+### SQL
+
+```python
+from df_connector.azure import sql
+
+azure_sql_obj = sql.connect("Test-sql-Connector")  # Identifier name which we created in the portal
+```
+
+
+## GCP
+
+### BigQuery
+
+```python
+from df_connector.gcp import bigquery
+
+bigquery_obj = bigquery.connect("Test-bigquery-Connector")  # Identifier name which we created in the portal
+```
+
+### Sheets
+
+```python
+from df_connector.gcp import sheets
+
+sheets_obj = sheets.connect("Test-sheets-Connector")  # Identifier name which we created in the portal
+```
+###  Storage
+
+```python
+from df_connector.gcp import storage
+
+storage_obj = storage.connect("Test-storage-Connector")  # Identifier name which we created in the portal
+```
+
+
+
 ## Cockroach DB
 
 ```python
@@ -96,13 +148,7 @@ datalake_table_client = datalake.connect_table_client("Test-datalake-Connector",
 
 
 ```
-## DynamoDB
 
-```python
-from df_connector.dynamodb import dynamodb
-
-aws_dynamodb_obj = dynamodb.connect("Test-dynamodb-Connector")  # Identifier name which we created in the portal
-```
 ## Facebook
 
 ```python
@@ -117,20 +163,8 @@ from df_connector import fedex
 
 fedex_obj = fedex.connect("Test-fedex-Connector")  # Identifier name which we created in the portal
 ```
-## GCP Storage
 
-```python
-from df_connector.gcp import storage
 
-storage_obj = storage.connect("Test-storage-Connector")  # Identifier name which we created in the portal
-```
-## Google Sheets
-
-```python
-from df_connector.gcp import sheets
-
-sheets_obj = sheets.connect("Test-sheets-Connector")  # Identifier name which we created in the portal
-```
 ## Jira
 
 ```python
@@ -174,13 +208,7 @@ from df_connector import postgresql
 
 postgresql_obj = postgresql.connect("Test-postgresql-Connector")  # Identifier name which we created in the portal
 ```
-## Redshift
 
-```python
-from df_connector.aws import redshift
-
-aws_redshift_obj = redshift.connect("Test-Redshift-Connector")  # Identifier name which we created in the portal
-```
 ## Run Metrics
 
 ```python
@@ -202,13 +230,7 @@ from df_connector.system import metrics
 
 content = metrics.tracking.get_csv("<start_date>", "<end-date>")
 ```
-## S3
 
-```python
-from df_connector.aws import s3
-
-aws_s3_obj = s3.connect("Test-S3-Connector")  # Identifier name which we created in the portal
-```
 ## Salesforce
 
 ```python
